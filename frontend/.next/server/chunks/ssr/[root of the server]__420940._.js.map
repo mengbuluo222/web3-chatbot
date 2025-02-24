@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 31, "column": 0}, "map": {"version":3,"sources":["file:///Users/yujing/Desktop/web3/project/web3-chatbot/frontend/src/app/layout.js"],"sourcesContent":["'use client' // 必须声明为客户端组件\nimport { Web3Provider } from '@web3-react/core'\nimport { metaMask } from '@/connectors/metaMask'\n\nexport default function RootLayout({ children }) {\n  return (\n    <Web3Provider connectors={[metaMask]}>\n      <html>{children}</html>\n    </Web3Provider>\n    // <html lang=\"en\">\n    //   <body\n    //     className={`${geistSans.variable} ${geistMono.variable} antialiased`}\n    //   >\n    //     {children}\n    //   </body>\n    // </html>\n  );\n}\n"],"names":[],"mappings":";;;;AACA;;;;;;AADA,aAAa,aAAa;;;;;AAIX,SAAS,WAAW,EAAE,QAAQ,EAAE;IAC7C,qBACE,8OAAC,wJAAA,CAAA,eAAY;QAAC,YAAY;YAAC;SAAS;kBAClC,cAAA,8OAAC;sBAAM;;;;;;;;;;;AAUb"}},
+    {"offset": {"line": 64, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}}]
+}
