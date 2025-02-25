@@ -2,8 +2,8 @@
   "version": 3,
   "sources": [],
   "sections": [
-    {"offset": {"line": 7, "column": 0}, "map": {"version":3,"sources":["file:///Users/yujing/Desktop/web3/project/web3-chatbot/frontend/src/app/page.js"],"sourcesContent":["import Image from \"next/image\";\n\nexport default function Home() {\n  return (\n    <div className=\"grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]\">\n      cc\n      \n    </div>\n  );\n}\n"],"names":[],"mappings":";;;;AAAA;;;AAEe,SAAS;IACtB,qBACE,8OAAC;QAAI,WAAU;kBAAmJ;;;;;;AAKtK"}},
-    {"offset": {"line": 24, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}},
-    {"offset": {"line": 35, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":""}},
-    {"offset": {"line": 35, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}}]
+    {"offset": {"line": 7, "column": 0}, "map": {"version":3,"sources":["file:///Users/yujing/Desktop/web3/project/web3-chatbot/frontend/src/app/page.js"],"sourcesContent":["// app/page.jsx\n\nimport { Input, Space } from 'antd';\nconst { Search } = Input;\nconst onSearch = (value, _e, info) => console.log(info?.source, value);\nconst Home = () => {\n  return (\n      <div className=\"\">\n        <div className=\"search-bar\">\n          <h1>Ask. Research. Invest Smarter</h1>\n          <Search\n            placeholder=\"input search text\"\n            onSearch={onSearch}\n          />\n        </div>\n        <div className=\"market\">\n        </div>\n        <div className=\"news\"></div>\n      </div>\n  );\n};\n\nexport default Home;"],"names":[],"mappings":"AAAA,eAAe;;;;;AAEf;;;AACA,MAAM,EAAE,MAAM,EAAE,GAAG,mIAAA,CAAA,QAAK;AACxB,MAAM,WAAW,CAAC,OAAO,IAAI,OAAS,QAAQ,GAAG,CAAC,MAAM,QAAQ;AAChE,MAAM,OAAO;IACX,qBACI,8OAAC;QAAI,WAAU;;0BACb,8OAAC;gBAAI,WAAU;;kCACb,8OAAC;kCAAG;;;;;;kCACJ,8OAAC;wBACC,aAAY;wBACZ,UAAU;;;;;;;;;;;;0BAGd,8OAAC;gBAAI,WAAU;;;;;;0BAEf,8OAAC;gBAAI,WAAU;;;;;;;;;;;;AAGvB;uCAEe"}},
+    {"offset": {"line": 67, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}},
+    {"offset": {"line": 78, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":""}},
+    {"offset": {"line": 78, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}}]
 }
