@@ -1,0 +1,9 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 7, "column": 0}, "map": {"version":3,"sources":["file:///Users/yujing/Desktop/web3/project/web3-chatbot/frontend/src/app/user/page.js"],"sourcesContent":["import React from 'react'\nimport { Typography } from 'antd'\nconst { Title } = Typography;\n\nexport default function User() {\n  return (\n    <div>\n       <Title level={3}>Blog</Title>\n    </div>\n  )\n}\n"],"names":[],"mappings":";;;;AAAA;AACA;;;;AACA,MAAM,EAAE,KAAK,EAAE,GAAG,mIAAA,CAAA,aAAU;AAEb,SAAS;IACtB,qBACE,8OAAC;kBACE,cAAA,8OAAC;YAAM,OAAO;sBAAG;;;;;;;;;;;AAGxB"}},
+    {"offset": {"line": 33, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}},
+    {"offset": {"line": 44, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":""}},
+    {"offset": {"line": 44, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}}]
+}

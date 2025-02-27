@@ -3,15 +3,6 @@
 import React from 'react';
 import Link from 'next/link';
 import { Menu, theme } from 'antd';
-import { 
-  BarChartOutlined, 
-  VideoCameraOutlined, 
-  BookOutlined,
-  UserOutlined,
-  BulbOutlined,
-  UploadOutlined, 
-  HomeOutlined 
-} from '@ant-design/icons';
 
 export default function Navigation() {
   const handleMenuClick = (e) => {
@@ -33,29 +24,24 @@ export default function Navigation() {
       items={[
         {
           key: 'index',
-          icon: <HomeOutlined />,
-          label: <Link href="/">首页</Link>,
+          label: <Link href="/">Home</Link>,
         },
         {
           key: 'market-analysis',
-          icon: <BarChartOutlined />,
-          label: <Link href="/market">市场分析</Link>,
+          label: <Link href="/market">Smart Market</Link>,
         },
         {
           key: 'learning-center',
-          icon: <BulbOutlined />,
-          label: <Link href="/learning">学习中心</Link>,
+          label: <Link href="/learning">AI Recommendation</Link>,
         },
+        // {
+        //   key: 'blog',
+        //   label: <Link href="/blog">博客</Link>,
+        // },
         {
           key: 'user-center',
-          icon: <UserOutlined />,
-          label: <Link href="/user">用户中心</Link>,
-        },
-        {
-          key: 'blog',
-          icon: <BookOutlined />,
-          label: <Link href="/blog">博客</Link>,
-        },
+          label: <Link href="/user">User</Link>,
+        }
       ]}
     />
   );

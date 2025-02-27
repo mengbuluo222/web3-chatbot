@@ -13,11 +13,92 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist
 ;
 ;
 function Learning() {
+    const columns = [
+        {
+            title: 'symbol',
+            dataIndex: 'symbol',
+            key: 'symbol'
+        },
+        {
+            title: 'Name',
+            dataIndex: 'name',
+            key: 'name',
+            render: (text)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                    children: text
+                }, void 0, false, {
+                    fileName: "[project]/src/app/learning/page.js",
+                    lineNumber: 14,
+                    columnNumber: 25
+                }, this)
+        },
+        {
+            title: 'price',
+            dataIndex: 'price',
+            key: 'price'
+        },
+        {
+            title: 'change',
+            dataIndex: 'change',
+            key: 'change'
+        },
+        {
+            title: 'score',
+            dataIndex: 'score',
+            key: 'score'
+        },
+        {
+            title: 'Action',
+            key: 'action',
+            render: (_, record)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(Space, {
+                    size: "middle",
+                    children: [
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                            children: [
+                                "Invite ",
+                                record.name
+                            ]
+                        }, void 0, true, {
+                            fileName: "[project]/src/app/learning/page.js",
+                            lineNumber: 36,
+                            columnNumber: 11
+                        }, this),
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                            children: "Delete"
+                        }, void 0, false, {
+                            fileName: "[project]/src/app/learning/page.js",
+                            lineNumber: 37,
+                            columnNumber: 11
+                        }, this)
+                    ]
+                }, void 0, true, {
+                    fileName: "[project]/src/app/learning/page.js",
+                    lineNumber: 35,
+                    columnNumber: 9
+                }, this)
+        }
+    ];
+    const [data, setData] = useState([
+        {
+            symbol: 'BRDG',
+            name: 'Bridge Investment Group Holdings Inc.',
+            price: 10.6,
+            change: 2.68,
+            score: 9
+        }
+    ]);
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-        children: "learning"
+        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(Table, {
+            className: "",
+            columns: columns,
+            dataSource: data
+        }, void 0, false, {
+            fileName: "[project]/src/app/learning/page.js",
+            lineNumber: 54,
+            columnNumber: 7
+        }, this)
     }, void 0, false, {
         fileName: "[project]/src/app/learning/page.js",
-        lineNumber: 5,
+        lineNumber: 53,
         columnNumber: 5
     }, this);
 }

@@ -20,3 +20,17 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+.card-image {
+  width: 150px;
+  height: 100px;
+  object-fit: cover;
+}
+.title-ellipsis {
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* 显示的行数 */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-weight: bold;
+  line-height: 1.5; /* 调整行高以适应两行 */
+}

@@ -1,9 +1,8 @@
 {
   "/page": "app/page.js",
   "/favicon.ico/route": "app/favicon.ico/route.js",
-  "/market/page": "app/market/page.js",
-  "/_not-found/page": "app/_not-found/page.js",
-  "/learning/page": "app/learning/page.js",
+  "/user/page": "app/user/page.js",
   "/blog/page": "app/blog/page.js",
-  "/user/page": "app/user/page.js"
+  "/market/page": "app/market/page.js",
+  "/learning/page": "app/learning/page.js"
 }

@@ -3,6 +3,7 @@
 import { Input, Space, Card, Row, Col, Typography, Table } from 'antd';
 const { Search } = Input;  // 正确导入 Search 组件
 import { useEffect, useState } from 'react';
+import Link from 'next/link'
 
 const { Title } = Typography;
 const onSearch = (value, _e, info) => console.log(info?.source, value);
@@ -48,6 +49,7 @@ const Home = () => {
 
   const [data, setData] = useState([
     {
+      key: '1',
       symbol: 'BRDG',
       name: 'Bridge Investment Group Holdings Inc.',
       price: 10.6,
@@ -73,7 +75,8 @@ const Home = () => {
       <div className="market mt-3">
         <div className='flex justify-between'>
           <Title level={3}>News<span className='text-sm font-normal pl-2'>Updates at: 16:00:00 EST</span></Title>
-          <a href="#">More</a>
+          <Link href="/market">More</Link>
+          {/* <a href="/leaning">More</a> */}
         </div>
         
         <Table className='border-1' columns={columns} dataSource={data} pagination={false}></Table>
