@@ -1,7 +1,7 @@
 'use client'
 import Navigation from './components/Navigation';
 import './globals.css';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Button, Layout, theme, message } from 'antd';
 
 import {
@@ -11,7 +11,9 @@ import {
 import Image from 'next/image';
 import logo from '../static/logo.png';
 import UserCenter from '@/app/components/UserCenter';
-import { ethers } from 'ethers'; // 引入ethers.js
+import { getContract } from '@/utils/contract';
+import { useWallet } from '@/hooks/useWallet';
+
 
 const { Header, Content, Footer, Sider } = Layout;
 
@@ -21,24 +23,32 @@ const RootLayout = ({ children }) => {
       token: { colorBgContainer, borderRadiusLG },
     } = theme.useToken();
     const [messageApi, contextHolder] = message.useMessage();
-    // 存储用户钱包地址
-    const [account, setAccount] = useState(null);
+    
+    const { account, error, connectWallet, disconnectWallet } = useWallet();
 
-    // 添加连接MetaMask的函数
-    const connectWallet = async () => {      
-      if (window.ethereum) {
-        window.ethereum.request({ method: 'eth_requestAccounts' })
-          .then(accounts => {
-            setAccount(accounts[0]);
-          })
-      } else {
-        messageApi.open({
-          type: 'error',
-          content: 'MetaMask is not installed',
-        });
+    // 添加事件处理函数
+    const handleConnect = async () => {
+      try {
+        await connectWallet();
+        messageApi.success('钱包连接成功！');
+      } catch (err) {
+        messageApi.error('连接失败：' + err.message);
       }
     };
-   
+
+
+
+    useEffect(() => {
+      if (error) {
+        messageApi.error(error);
+      }
+    }, [error, messageApi]);
+
+    // 监听账户状态变化
+    useEffect(() => {
+      console.log('当前钱包状态:', account);
+    }, [account]);
+
     return (
         <html lang="en">
             <body>
@@ -48,10 +58,10 @@ const RootLayout = ({ children }) => {
                   }}
                 >
                   <Sider collapsible theme='light' collapsed={collapsed} onCollapse={(value) => setCollapsed(value)}>
-                  <div className={`logo flex items-center mt-3 mb-2 ml-5 ${collapsed ? 'justify-center' : 'justify-start'}`}>
+                    <div className={`logo flex items-center mt-3 mb-2 ml-5 ${collapsed ? 'justify-center' : 'justify-start'}`}>
                       {/* <img src="/logo.png" alt="logo" /> */}
                       <Image src={logo} alt="logo" width={24} height={24} />
-                      <span className="ml-2 font-bold">{collapsed ? '' : 'ChatbotDEFI'}</span>
+                      <span className="ml-2 font-bold">{collapsed ? '' : 'Chatbot'}</span>
                     </div>
                     <Navigation />
                   </Sider>
@@ -78,8 +88,22 @@ const RootLayout = ({ children }) => {
                       <div className="flex justify-end items-center h-full mr-2">
                         {/* <Avatar className="mr-2" src={<img src={url} alt="avatar" />} /> */}
                         
-                        {account && <UserCenter />}
-                        {!account && <Button color="primary" variant="outlined" onClick={connectWallet}>connect</Button>}
+                        {/* {account && (
+                          <>
+                            <span className="mr-4">{`${account.slice(0, 6)}...${account.slice(-4)}`}</span>
+                            <Button onClick={handleDisconnect}>断开连接</Button>
+                            <UserCenter />
+                          </>
+                        )} */}
+                        { account && (<>
+                          <span className="mr-4">{`${account.slice(0, 6)}...${account.slice(-4)}`}</span>
+                          <UserCenter /> 
+                        </>)}
+                        {!account && (
+                          <Button type="primary" onClick={handleConnect}>
+                            连接钱包
+                          </Button>
+                        )}
                       </div>
                     </Header>
                     <Content

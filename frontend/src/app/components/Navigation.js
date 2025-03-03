@@ -22,18 +22,18 @@ export default function Navigation() {
       defaultSelectedKeys={['1']}
       onClick={handleMenuClick}
       items={[
-        {
-          key: 'index',
-          label: <Link href="/">Home</Link>,
-        },
-        {
-          key: 'market-analysis',
-          label: <Link href="/market">Smart Market</Link>,
-        },
-        {
-          key: 'learning-center',
-          label: <Link href="/learning">AI Recommendation</Link>,
-        },
+        // {
+        //   key: 'index',
+        //   label: <Link href="/">Home</Link>,
+        // },
+        // {
+        //   key: 'market-analysis',
+        //   label: <Link href="/market">Smart Market</Link>,
+        // },
+        // {
+        //   key: 'learning-center',
+        //   label: <Link href="/learning">AI Recommendation</Link>,
+        // },
         // {
         //   key: 'blog',
         //   label: <Link href="/blog">博客</Link>,

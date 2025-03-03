@@ -61,18 +61,18 @@ function Learning() {
     const items = [
         {
             key: '1',
-            label: 'Tab 1',
-            children: 'Content of Tab Pane 1'
+            label: 'Bitcoin',
+            children: ''
         },
         {
             key: '2',
-            label: 'Tab 2',
-            children: 'Content of Tab Pane 2'
+            label: 'Ethereum',
+            children: ''
         },
         {
             key: '3',
-            label: 'Tab 3',
-            children: 'Content of Tab Pane 3'
+            label: 'NFT',
+            children: ''
         }
     ];
     const [activeKey, setActiveKey] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])('1');
