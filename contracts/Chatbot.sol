@@ -1,6 +1,6 @@
 // 创建一个基础的聊天机器人合约
-pragma solidity ^0.8.0;
-
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.18;
 contract ChatBot {
     struct Message {
         address sender;

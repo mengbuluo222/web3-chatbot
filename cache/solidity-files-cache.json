@@ -2,8 +2,8 @@
   "_format": "hh-sol-cache-2",
   "files": {
     "/Users/yujing/Desktop/web3/project/web3-chatbot/contracts/Chatbot.sol": {
-      "lastModificationDate": 1740312640124,
-      "contentHash": "78609dade5a00f46883edc97c16fcfe2",
+      "lastModificationDate": 1740805555045,
+      "contentHash": "8bdb347a5fb65758e464eec56c2ac5d8",
       "sourceName": "contracts/Chatbot.sol",
       "solcConfig": {
         "version": "0.8.18",
@@ -30,10 +30,45 @@
       },
       "imports": [],
       "versionPragmas": [
-        "^0.8.0"
+        "^0.8.18"
       ],
       "artifacts": [
         "ChatBot"
+      ]
+    },
+    "/Users/yujing/Desktop/web3/project/web3-chatbot/contracts/Lock.sol": {
+      "lastModificationDate": 1740805560759,
+      "contentHash": "3db15c818893e011a34c39b4c6ed598e",
+      "sourceName": "contracts/Lock.sol",
+      "solcConfig": {
+        "version": "0.8.18",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.18"
+      ],
+      "artifacts": [
+        "Lock"
       ]
     }
   }
